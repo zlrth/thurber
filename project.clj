@@ -1,6 +1,6 @@
-(def version-apache-beam "2.42.0")
+(def version-apache-beam "2.67.0")
 
-(defproject com.github.atdixon/thurber "1.1.1-SNAPSHOT"
+(defproject com.github.atdixon/thurber "1.1.1-267" ;; temp, for local dev via lein install
   :author "Aaron Dixon <https://write.as/aaron-d/>"
   :description "thurber: Apache Beam on Clojure"
   :url "https://github.com/atdixon/thurber"
@@ -14,7 +14,7 @@
                         ["snapshots" {:url "https://repo.clojars.org" :creds :gpg}]]
 
   :java-source-paths ["src"]
-  :javac-options ["-target" "1.8" "-source" "1.8"]
+  ;; :javac-options ["-target" "1.8" "-source" "1.8"]
 
   :pedantic? false
 
@@ -25,6 +25,7 @@
    [org.clojure/data.json "2.4.0"]
    [org.clojure/tools.logging "1.2.4"]
    [org.apache.beam/beam-sdks-java-core ~version-apache-beam]
+   [org.apache.beam/beam-sdks-java-extensions-avro ~version-apache-beam]
    [com.google.code.findbugs/jsr305 "3.0.2"]
    [org.javassist/javassist "3.29.2-GA"]
    [com.taoensso/nippy "3.2.0"]
